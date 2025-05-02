@@ -27,3 +27,14 @@ export function getUserProfile() {
     }
   })
 }
+
+export function updateUserProfile(profileData) {
+  return fetchWithResponse('profile/1', {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Token ${localStorage.getItem('token')}`,
+    },
+    body: JSON.stringify(profileData)
+  })
+}
