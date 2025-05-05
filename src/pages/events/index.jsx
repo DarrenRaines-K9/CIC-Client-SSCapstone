@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/router";
-import { getEvents } from "@/data/events";
+import { getEvents, volunteerForEvent } from "@/data/events";
 import { PlusCircle } from "lucide-react";
 
 export default function Events() {
@@ -41,6 +41,21 @@ export default function Events() {
 
   const handleCreateEvent = () => {
     router.push("/events/new");
+  };
+
+  const handleVolunteer = (eventId) => {
+    // Handle volunteer action here
+    volunteerForEvent(eventId)
+      .then((response) => {
+        if (response) {
+          // Successfully volunteered for the event
+          console.log("Successfully volunteered for event:", response);
+        }
+      })
+      .catch((error) => {
+        // The response had errors
+        console.error("Error volunteering for event:", error.message);
+      });
   };
 
   if (isLoading) {
@@ -80,7 +95,14 @@ export default function Events() {
               <Button onClick={() => router.push(`/events/${event.id}`)}>
                 View Details
               </Button>
-              <Button variant="outline">Volunteer</Button>
+              <Button
+                variant="outline"
+                onClick={() => {
+                  handleVolunteer(event.id);
+                }}
+              >
+                Volunteer
+              </Button>
             </CardFooter>
           </Card>
         ))}

@@ -61,6 +61,17 @@ export function editEvent(id, event) {
   });
 }
 
+export function volunteerForEvent(eventId) {
+  return fetchWithResponse(`eventvolunteers`, {
+    method: "POST",
+    headers: {
+      Authorization: `Token ${localStorage.getItem("token")}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ event: eventId }),
+  });
+}
+
 // export function recommendProduct(id, username) {
 //   return fetchWithResponse(`products/${id}/recommend`, {
 //     method: "POST",
