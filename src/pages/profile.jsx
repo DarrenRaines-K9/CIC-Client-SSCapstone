@@ -1,3 +1,5 @@
+"use client";
+
 import * as React from "react";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -143,7 +145,24 @@ export default function Profile() {
           <Button onClick={() => setIsEditing(true)}>Edit</Button>
         )}
       </CardFooter>
-
+      {/* <Card className="m-5">
+        <CardHeader>
+          <CardTitle>Events You Vounteered For</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <form>
+            <div className="grid w-full items-center gap-4">
+              <div className="flex flex-col space-y-1.5">
+                <Label htmlFor="name">Event</Label>
+                <Input id="name" placeholder="Event" />
+              </div>
+            </div>
+          </form>
+        </CardContent>
+        <CardFooter className="flex justify-between">
+          <Button>Add</Button>
+        </CardFooter>
+      </Card> */}
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button variant="outline" size="icon">
@@ -166,24 +185,4 @@ export default function Profile() {
       </DropdownMenu>
     </Card>
   );
-}
-{
-  /* <Card className="m-5">
-  <CardHeader>
-    <CardTitle>Events You Vounteered For</CardTitle>
-  </CardHeader>
-  <CardContent>
-    <form>
-      <div className="grid w-full items-center gap-4">
-        <div className="flex flex-col space-y-1.5">
-          <Label htmlFor="name">Event</Label>
-          <Input id="name" placeholder="Event" />
-        </div>
-      </div>
-    </form>
-  </CardContent>
-  <CardFooter className="flex justify-between">
-    <Button>Add</Button>
-  </CardFooter>
-</Card> */
 }

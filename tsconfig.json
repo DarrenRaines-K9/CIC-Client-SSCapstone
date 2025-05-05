@@ -35,7 +35,7 @@
     "next-env.d.ts",
     "src/pages/login.js",
     ".next/types/**/*.ts"
-, "src/app/theme-provider.tsx", "src/pages/login.tsx", "src/pages/profile.jsx", "src/pages/register.jsx"  ],
+, "src/app/theme-provider.tsx", "src/pages/login.tsx", "src/pages/profile.jsx", "src/pages/register.jsx", "src/data/fetcher.jsx", "src/data/auth.jsx", "src/data/events.jsx", "src/pages/events/index.jsx"  ],
   "exclude": [
     "node_modules"
   ]
