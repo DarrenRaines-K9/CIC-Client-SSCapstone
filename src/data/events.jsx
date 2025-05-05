@@ -42,6 +42,14 @@ export function addEvent(event) {
   });
 }
 
+export function getVolunteeredEvents() {
+  return fetchWithResponse("eventvolunteers", {
+    headers: {
+      Authorization: `Token ${localStorage.getItem("token")}`,
+    },
+  });
+}
+
 export function editEvent(id, event) {
   return fetchWithoutResponse(`events/${id}`, {
     method: "PUT",
