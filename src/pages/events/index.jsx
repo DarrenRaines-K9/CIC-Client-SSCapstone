@@ -49,6 +49,7 @@ export default function Events() {
       .then((response) => {
         if (response) {
           // Successfully volunteered for the event
+          router.push("/profile");
           console.log("Successfully volunteered for event:", response);
         }
       })
