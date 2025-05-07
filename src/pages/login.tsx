@@ -52,6 +52,7 @@ export default function Login() {
   };
 
   return (
+    <div className="flex h-screen w-full items-center justify-center">
     <Card className="w-[350px] items center">
       <CardHeader>
         <CardTitle>Welcome Please Login</CardTitle>
@@ -66,14 +67,14 @@ export default function Login() {
                 ref={username}
                 type="text"
                 placeholder="Username"
-              />
+                />
               <Label htmlFor="name">Password</Label>
               <Input
                 id="name"
                 ref={password}
                 type="text"
                 placeholder="Password"
-              />
+                />
             </div>
           </div>
         </form>
@@ -107,5 +108,6 @@ export default function Login() {
         </Link>
       </CardFooter>
     </Card>
+                </div>
   );
 }

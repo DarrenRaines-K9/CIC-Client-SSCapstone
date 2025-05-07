@@ -12,33 +12,19 @@ import {
 
 export default function Home() {
     return (
-      <Card className="w-[350px]">
+      <div className="flex h-screen w-full items-center justify-center">        
+      <Card className="w-[850px]">
         <CardHeader>
           <CardTitle>Home</CardTitle>
           <CardDescription>Dont Forget to Update This With Image!!!!!</CardDescription>
         </CardHeader>
         <CardContent>
-          {/* <form>
-            <div className="grid w-full items-center gap-4">
-
-              <div className="flex flex-col space-y-1.5">
-              </div>
-            </div>
-          </form> */}
         </CardContent>
         <CardFooter className="flex justify-between">
-          {/* <Button variant="outline">Cancel</Button>
-          <Button>Deploy</Button> */}
+            {/* <Button variant="outline">Cancel</Button>
+            <Button>Deploy</Button> */}
         </CardFooter>
       </Card>
+      </div>
     )
   }
-
-  // Home.getLayout = function getLayout(page) {
-  //   return (
-  //     <RootLayout>
-  //       <NavBar />
-  //      <section className="container">{page}</section>
-  //     </RootLayout>
-  //   )
-  // }

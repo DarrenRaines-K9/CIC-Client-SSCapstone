@@ -74,7 +74,7 @@ export default function NewInventory() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-4">
+    <div className="flex w-full flex-col items-center justify-center m-10">
       <h1 className="text-2xl font-bold mb-4">Add Inventory Item</h1>
 
       {errorMessage && (
@@ -83,7 +83,7 @@ export default function NewInventory() {
         </div>
       )}
 
-      <Card className="w-full max-w-md">
+      <Card className="w-[850px]">
         <CardHeader>
           <CardTitle>Inventory Details</CardTitle>
         </CardHeader>

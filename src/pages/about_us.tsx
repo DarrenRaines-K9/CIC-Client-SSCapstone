@@ -11,7 +11,8 @@ import {
 
 export default function Test() {
     return (
-      <Card className="w-[350px]">
+      <div className="flex h-screen w-full items-center justify-center">
+      <Card className="w-[850px]">
         <CardHeader>
           <CardTitle>About Us</CardTitle>
           <CardDescription>Dont Forget to Update This With Image!!!!!</CardDescription>
@@ -19,16 +20,17 @@ export default function Test() {
         <CardContent>
           {/* <form>
             <div className="grid w-full items-center gap-4">
-
-              <div className="flex flex-col space-y-1.5">
-              </div>
+            
+            <div className="flex flex-col space-y-1.5">
             </div>
-          </form> */}
+            </div>
+            </form> */}
         </CardContent>
         <CardFooter className="flex justify-between">
           {/* <Button variant="outline">Cancel</Button>
           <Button>Deploy</Button> */}
         </CardFooter>
       </Card>
+          </div>
     )
   }

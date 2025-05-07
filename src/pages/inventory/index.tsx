@@ -52,11 +52,11 @@ export default function Inventory() {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen">
+    <div className="flex w-full flex-col items-center justify-center m-10">
       <h1 className="text-2xl font-bold mb-4">Inventory</h1>
       <div className="grid grid-cols-1 gap-4">
         <Card
-          className="w-[350px] border-dashed cursor-pointer hover:bg-gray-50 transition-colors"
+          className="w-[650px] border-dashed cursor-pointer hover:bg-gray-50 transition-colors"
           onClick={handleCreateInventory}
         >
           <CardContent className="flex flex-col items-center justify-center py-8">
@@ -66,14 +66,14 @@ export default function Inventory() {
           </CardContent>
         </Card>       
         {inventory.map((inventory) => (
-          <Card key={inventory.id} className="w-[350px]">
-            <CardHeader>
-              <CardTitle>{inventory.name}</CardTitle>
+          <Card key={inventory.id} className="w-[650px]">
+            <CardHeader >
+              <CardTitle className="flex items-center justify-center">{inventory.name}</CardTitle>
             </CardHeader>
             <CardContent>
-              <p>{inventory.description}</p>
-              <p>Quantity: {inventory.quantity}</p>
-              <p>Cost: {inventory.cost}</p>
+              <p className="flex items-center justify-center">{inventory.description}</p>
+              <p className="flex items-center justify-center">Quantity: {inventory.quantity}</p>
+              <p className="flex items-center justify-center">Cost: {inventory.cost}</p>
             </CardContent>
             <CardFooter>
               <Button onClick={() => router.push(`/inventory/${inventory.id}`)}>

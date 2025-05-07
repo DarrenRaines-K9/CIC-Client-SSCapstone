@@ -69,11 +69,11 @@ export default function Events() {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen">
+    <div className="flex w-full flex-col items-center justify-center min-h-screen m-10">
       <h1 className="text-2xl font-bold mb-4">Events</h1>
       <div className="grid grid-cols-1 gap-4">
         <Card
-          className="w-[350px] border-dashed cursor-pointer hover:bg-gray-50 transition-colors"
+          className="w-[650px] border-dashed cursor-pointer hover:bg-gray-50 transition-colors"
           onClick={handleCreateEvent}
         >
           <CardContent className="flex flex-col items-center justify-center py-8">
@@ -83,14 +83,20 @@ export default function Events() {
           </CardContent>
         </Card>
         {events.map((event) => (
-          <Card key={event.id} className="w-[350px]">
-            <CardHeader>
+          <Card key={event.id} className="w-[650px]">
+            <CardHeader className="flex items-center justify-center">
               <CardTitle>{event.title}</CardTitle>
             </CardHeader>
             <CardContent>
-              <p>{event.address}</p>
-              <p>Date: {event.date}</p>
-              <p>Location: {event.location.city}</p>
+              <p className="flex items-center justify-center">
+                {event.address}
+              </p>
+              <p className="flex items-center justify-center">
+                Date: {event.date}
+              </p>
+              <p className="flex items-center justify-center">
+                Location: {event.location.city}
+              </p>
             </CardContent>
             <CardFooter className="flex justify-between">
               <Button onClick={() => router.push(`/events/${event.id}`)}>
