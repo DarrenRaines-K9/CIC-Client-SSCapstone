@@ -70,7 +70,7 @@ export default function Events() {
 
   return (
     <div className="flex w-full flex-col items-center justify-center min-h-screen m-10">
-      <h1 className="text-2xl font-bold mb-4">Events</h1>
+      <h1 className="text-2xl font-bold mb-4">Upcoming Events</h1>
       <div className="grid grid-cols-1 gap-4">
         <Card
           className="w-[650px] border-dashed cursor-pointer hover:bg-gray-50 transition-colors"

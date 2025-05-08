@@ -1,5 +1,5 @@
 import { Sidebar, SidebarContent, SidebarGroup, SidebarMenu, SidebarMenuButton } from "@/components/ui/sidebar"
-import { Calendar, Home, FileTextIcon, CircleUser, Smile, Earth, LogOut} from "lucide-react"
+import { Home, FileTextIcon, CircleUser, Smile, LogOut, CalendarDays, MapPinned} from "lucide-react"
 import Link from "next/link"
 import useAppContext from "./AppWrapper"
  
@@ -21,7 +21,7 @@ export default function AppSidebar() {
                     </SidebarMenuButton>
                 <SidebarMenuButton asChild>
                     <Link href="/events">
-                        <Calendar className="mr-2 h-4 w-4" />
+                        <CalendarDays className="mr-2 h-4 w-4" />
                         Events
                     </Link>
                 </SidebarMenuButton>
@@ -33,7 +33,7 @@ export default function AppSidebar() {
                 </SidebarMenuButton>     
                 <SidebarMenuButton asChild>
                     <Link href="/map">
-                        <Earth className="mr-2 h-4 w-4" />
+                        <MapPinned className="mr-2 h-4 w-4" />
                         Map
                     </Link>
                 </SidebarMenuButton>     
@@ -64,3 +64,5 @@ export default function AppSidebar() {
     </Sidebar>
   )
 }
+
+MapPinned

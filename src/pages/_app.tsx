@@ -6,6 +6,7 @@ import "../app/globals.css";
 import Head from "next/head";
 import AppSideBAr from "../components/app-sidebar";
 import { SidebarProvider, SidebarTrigger} from "@/components/ui/sidebar"
+
 // import { AppThemeProvider } from "@/components/app-themeProvider";
 
 
