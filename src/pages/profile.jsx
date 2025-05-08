@@ -302,8 +302,8 @@ export default function Profile() {
   }
 
   return (
-    <div className="flex h-screen w-full items-center justify-center m-10">
-      <Card className="w-[650px] flex justify-center min-h-screen">
+    <div className="flex h-auto  w-full items-center justify-center m-10">
+      <Card className="w-[850px] flex justify-center min-h-screen">
         <CardHeader>
           <CardTitle>Profile</CardTitle>
         </CardHeader>

@@ -149,7 +149,7 @@ export default function EventDetails() {
   return (
     <div className="flex  w-full flex-col items-center justify-center min-h-screen p-4">
       <h1 className="text-2xl font-bold mb-4">Event Details</h1>
-      <Card className="w-full max-w-md">
+      <Card className="w-[850px]">
         <CardHeader>
           <CardTitle>{event.title}</CardTitle>
         </CardHeader>
