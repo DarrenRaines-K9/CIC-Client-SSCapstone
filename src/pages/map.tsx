@@ -37,10 +37,10 @@ export default function GoogleMaps() {
             </div>
           )}
         </CardContent>
-        <CardFooter className="flex justify-between">
-          {/* <Button variant="outline">Cancel</Button>
-          <Button>Deploy</Button> */}
-        </CardFooter>
+          <CardFooter className="flex justify-between">
+            {/* <Button variant="outline">Cancel</Button>
+            <Button>Deploy</Button> */}
+          </CardFooter>
       </Card>
       </div>
     )
